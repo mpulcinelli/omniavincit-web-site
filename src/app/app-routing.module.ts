@@ -5,7 +5,7 @@ import {SobreComponent}  from "./sobre/sobre.component";
 
 const routes: Routes = [
   { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
-  { path: 'about', component: SobreComponent }
+  { path: 'sobre', component: SobreComponent }
 ];
 
 

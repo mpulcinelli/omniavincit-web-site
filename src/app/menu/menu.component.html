@@ -1,59 +1,48 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-
-      <a class="navbar-brand" href="#">Home</a>
-
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="navbar-nav">
-        <li class="nav-item" (click)="onSelect('cm')" [class.active]="'cm'===itemSelected"><a routerLink="/carteira-acoes">Carteira Mensal</a></li>
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Features</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Pricing</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Dropdown link
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <a class="dropdown-item" href="#">Something else here</a>
-            </div>
-          </li>
-        </ul>
-      </div>
+<nav class="navbar navbar-expand-lg  navbar-dark bg-dark" >
+  <a class="navbar-brand" href="#">OVT</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
 
+  <div class="collapse navbar-collapse d-flex flex-row-reverse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/carteira-mensal">Carteira Mensal</a>
+      </li>
 
-
-        <div class="collapse navbar-collapse" id="navcol-1">
-            <ul class="nav navbar-nav navbar-right">
-
-
-                <li class="dropdown"><a data-toggle="dropdown" aria-expanded="false" href="#" class="dropdown-toggle">Estratégia com Opções<span class="caret"></span></a>
-                    <ul role="menu" class="dropdown-menu">
-                      <li role="presentation" (click)="onSelect('ta')" [class.active]="'ta'===itemSelected"><a routerLink="/trava-alta">Travas de Alta</a></li>
-                      <li role="presentation" (click)="onSelect('tb')" [class.active]="'tb'===itemSelected"><a routerLink="/trava-baixa">Travas de Baixa</a></li>
-                      <div class="divider"></div>
-                      <li role="presentation" (click)="onSelect('st')" [class.active]="'st'===itemSelected"><a routerLink="/straddle">Straddle</a></li>
-                      <div class="divider"></div>
-                      <li role="presentation" (click)="onSelect('cc')" [class.active]="'cc'===itemSelected"><a routerLink="/compra-seco">Compra a Seco</a></li>
-                      <li role="presentation" (click)="onSelect('vc')" [class.active]="'vc'===itemSelected"><a routerLink="/venda-coberta">Venda Coberta</a></li>
-                    </ul>
-                </li>
-
-                <li role="presentation" (click)="onSelect('login')" [class.active]="'login'===itemSelected"><a routerLink="/area-usuario">Minha Área</a></li>
-                <li role="presentation" (click)="onSelect('art')" [class.active]="'art'===itemSelected"><a routerLink="/artigos">Artigos</a></li>
-                <li role="presentation" (click)="onSelect('contato')" [class.active]="'contato'===itemSelected"><a routerLink="/contato">Contato</a></li>
-            </ul>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Estratégia com Opções
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" routerLink="/trava-alta">Travas de Alta</a>
+          <a class="dropdown-item" routerLink="/trava-baixa">Travas de Baixa</a>
+          <div class="divider"></div>
+          <a class="dropdown-item" routerLink="/straddle">Straddle</a>
+          <div class="divider"></div>
+          <a class="dropdown-item" routerLink="/compra-seco">Compra a Seco</a>
+          <a class="dropdown-item" routerLink="/venda-coberta">Venda Coberta</a>
         </div>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/area-usuario">Minha Área</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/artigos">Artigos</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/contato">Contato</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/sobre">Sobre</a>
+      </li>
+
+    </ul>
+  </div>
 </nav>
