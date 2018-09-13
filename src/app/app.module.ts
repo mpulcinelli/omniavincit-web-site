@@ -1,20 +1,19 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { NgModule, LOCALE_ID } from '@angular/core';
+import { registerLocaleData } from '@angular/common';
+import ptBr from '@angular/common/locales/pt';
 import { HttpClientModule } from '@angular/common/http';
 
-import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
-import { TooltipModule } from 'ngx-bootstrap/tooltip';
-import { ModalModule } from 'ngx-bootstrap/modal';
 import { DashboardModule }  from './dashboard/dashboard.module';
 import { CarteiraMensalModule } from './carteira-mensal/carteira-mensal.module';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule }  from "./app-routing.module";
 import { SobreComponent } from './sobre/sobre.component';
-
-
-
 import { MenuComponent } from './menu/menu.component';
+
+registerLocaleData(ptBr);
 
 @NgModule({
   declarations: [
@@ -26,14 +25,12 @@ import { MenuComponent } from './menu/menu.component';
     BrowserModule,
     AppRoutingModule,
     BrowserModule,
+    BrowserAnimationsModule,
     HttpClientModule,
-    BsDropdownModule.forRoot(),
-    TooltipModule.forRoot(),
-    ModalModule.forRoot(),
     DashboardModule,
     CarteiraMensalModule
   ],
-  providers: [],
+  providers: [{ provide: LOCALE_ID, useValue: 'pt' }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
