@@ -12,8 +12,8 @@ function getParam($param) {
 
 function getCredentials()
 {
-	$myfile = fopen("F:\Marcio\Desenv\Web\omniavincit-web-site\src\app\webapi\cred.dat", "r") or die("Unable to open file!");
-	$file_content = fread($myfile,filesize("F:\Marcio\Desenv\Web\omniavincit-web-site\src\app\webapi\cred.dat"));
+	$myfile = fopen("cred.dat", "r") or die("Unable to open file!");
+	$file_content = fread($myfile,filesize("cred.dat"));
 	fclose($myfile);
 
 	$data = json_decode($file_content);

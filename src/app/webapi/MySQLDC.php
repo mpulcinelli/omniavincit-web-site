@@ -14,21 +14,22 @@ class MySQLDC
     function loadCredentials()
     {
          $cred = getCredentials();
-         $host = $cred->{'host'};
-         $usr = $cred->{'usr'};
-         $pw = $cred->{'pw'};
-         $db = $cred->{'db'};
+         $this->host = $cred->{'host'};
+         $this->usr = $cred->{'usr'};
+         $this->pw = $cred->{'pw'};
+         $this->db = $cred->{'db'};
     }
 
     // Esta função conecta-se ao banco de dados e o seleciona.
     function connMySQL()
     {
         $this->loadCredentials();
+
         $this->conn = mysqli_connect($this->host, $this->usr, $this->pw, $this->db);
 
         mysqli_set_charset($this->conn, "utf8");
 
-        if (! $this->conn) {
+        if (!$this->conn) {
             exit();
         } elseif (! mysqli_select_db($this->conn, $this->db)) {
             exit();
