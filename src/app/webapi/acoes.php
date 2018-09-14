@@ -1,4 +1,5 @@
 <?php
+header('Access-Control-Allow-Origin: *');
 header ( 'Content-Type: text/html; charset=utf-8' );
 header ( 'Expires: Sat, 26 Jul 1997 05:00:00 GMT' );
 header ( 'Last-Modified: ' . gmdate ( 'D, d M Y H:i:s' ) . ' GMT' );

@@ -1,10 +1,12 @@
 export interface Acao
 {
-    Id:number;
-    Codigo:string;
-    //bid:number;
-    //ask:number;
-    Last:number;
-    Atualizacao:Date;
-    Volatilidade:number;
+    ID:number;
+    CODIGO:string;
+    ABERTURA:number;
+    MAXIMA:number;
+    MINIMA:number;
+    FECHAMENTO:number;
+    ATUALIZACAO:Date;
+    VOLATILIDADE:number;
+    NOME:string;
 }

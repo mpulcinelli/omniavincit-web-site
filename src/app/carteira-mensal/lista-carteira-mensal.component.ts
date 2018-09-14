@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 //import { formatDate } from '@angular/common';
+import {AcaoService}  from "../servico/acao.service";
 import {Acao} from '../model/acao'
 
 @Component({
@@ -11,15 +12,19 @@ export class ListaCarteiraMensalComponent implements OnInit {
 //Atualizacao:formatDate(this.agora, 'dd-MM-yyyy hh:mm:ss a', 'pt-BR', '+3000')
 
   acoes: Acao[];
-  constructor() { }
+  constructor(private acaoService:AcaoService) { }
   agora=new Date();
 
-  ngOnInit() {
+  ngOnInit()
+  {
+      this.acaoService.getAcoes().then(acoes => this.acoes = acoes);
+  }
 
-      this.acoes = [
-                        { Id : 1, Codigo:'0001', Last:10, Atualizacao:this.agora, Volatilidade:10},
-                        { Id : 2, Codigo:'0001', Last:10, Atualizacao:this.agora, Volatilidade:10}
-                    ];
+
+  handleClick()
+  {
+      // debugger
+        alert(this.acoes[0].NOME);
   }
 
 }
