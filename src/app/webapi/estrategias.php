@@ -22,9 +22,9 @@ if ($param!=null)
 			$codigoopcaovenda=getParam('codigoopcaovenda');
 			$strikeopcaovenda=getParam('strikeopcaovenda');
 			$premioopcaovenda=getParam('premioopcaovenda');
-      $spreadoperacao=getParam('spreadoperacao');
-      $tamanhotrava=getParam('tamanhotrava');
-      $percentuallucromaximo=getParam('percentuallucromaximo');
+      		$spreadoperacao=getParam('spreadoperacao');
+      		$tamanhotrava=getParam('tamanhotrava');
+      		$percentuallucromaximo=getParam('percentuallucromaximo');
 
 			echo CEstrategia::incluirTrava($id, $codigoopcaocompra,
                                          $strikeopcaocompra, $premioopcaocompra,
