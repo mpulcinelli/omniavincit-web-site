@@ -11,13 +11,19 @@ require_once 'Global.php';
 
 $param = getParam('param');
 
+
+
 if ($param!=null)
 {
 	switch ($param)
 	{
 		case 'teste':
-			$cred=getCredentials();
-			echo var_dump($cred);
+			$img = 'C:/Users/marci/AppData/Roaming/MetaQuotes/Terminal/83D4764E0403A8685E84D6FCAB361879/MQL5/Files/AAPL34-20180910.gif';
+			//$img =$_FILES[0];
+
+			$base=getImageBase64($img);
+			//echo "<img src='".$base."' />";
+			echo $base;
 			break;
 		case 'incluir' :
 			$cod=getParam('cod');

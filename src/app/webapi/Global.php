@@ -21,4 +21,12 @@ function getCredentials()
 	return $data;
 }
 
+function getImageBase64($img_path)
+{
+	$type = pathinfo($img_path, PATHINFO_EXTENSION);
+	$img_data = file_get_contents($img_path);
+	$base64 = 'data:image/' . $type . ';base64,' . base64_encode($img_data);
+
+	return $base64;
+}
 ?>
