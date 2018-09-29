@@ -13,6 +13,7 @@ import { AppRoutingModule }  from "./app-routing.module";
 import { SobreComponent } from './sobre/sobre.component';
 import { MenuComponent } from './menu/menu.component';
 
+
 registerLocaleData(ptBr);
 
 @NgModule({

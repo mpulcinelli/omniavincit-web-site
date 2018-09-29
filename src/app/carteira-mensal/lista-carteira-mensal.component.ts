@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 //import { formatDate } from '@angular/common';
 import {AcaoService}  from "../servico/acao.service";
-import {Acao} from '../model/acao'
+import {Acao} from '../model/acao';
 
 @Component({
   selector: 'app-lista-carteira-mensal',
